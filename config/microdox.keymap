@@ -27,8 +27,8 @@
                 };
                 nav_layer {
 // -----------------------------------------------------------------------------------------
-// |BTCLR|     | ESC |  ~   |     |   | TAB | HOME |  UP  | END | DEL  |
-// | BT1 | GUI | ALT | CTRL | NUM |   |  /  | LEFT | DOWN | RGT | BKSP |
+// |BTCLR|     | ESC |  ~   |     |   | TAB | HOME | BKSP | END | DEL  |
+// | BT1 | GUI | ALT | CTRL | NUM |   |  /  | LEFT | UP   | DOWN| RGT  |
 // | BT2 |     |     |      |     |   |  \  | ENT  |      |     |      |
 //             |     |      |     |   |     |      |      |
                         bindings = <
