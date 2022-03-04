@@ -55,7 +55,7 @@
                         bindings = <
     &trans      &trans    &trans      &trans      &bt BT_CLR       &kp K_REDO   &kp K_PASTE    &kp K_COPY   &kp K_CUT  &kp K_UNDO
     &kp LGUI    &kp LALT  &kp LCTRL   &kp LSHIFT  &bt BT_SEL 0     &kp CAPSLOCK &kp LEFT       &kp DOWN     &kp UP     &kp RIGHT
-    &trans      &trans    &trans      &trans      &bt BT_SEL 1     &kp INST     &kp HOME       &kp PGDN     &kp PGUP   &kp END
+    &trans      &trans    &trans      &trans      &bt BT_SEL 1     &kp INS     &kp HOME       &kp PGDN     &kp PGUP   &kp END
                                       &trans   &trans    &trans    &kp ENTER    &kp BACKSPACE  &kp DEL
                         >;
                 };
