@@ -83,7 +83,7 @@
        &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LBKT  &kp RBKT     &trans &trans    &trans    &trans    &trans
        &kp COLON  &kp DLLR  &kp PRCNT        &kp MINUS &kp PLUS     &trans &kp LGUI  &kp LALT  &kp LCTRL &kp LSHIFT
        &kp EQUAL  &kp EXCL  &kp AT           &kp HASH  &kp PIPE     &trans &trans    &trans    &trans    &trans
-                       &kp LPAR &kp RPAR  &UNDER     &trans   &trans   &trans
+                       &kp LPAR &kp RPAR  &kp UNDER     &trans   &trans   &trans
                         >;
                 };
 
