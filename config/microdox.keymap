@@ -75,7 +75,7 @@
    &kp Q          &kp W       &kp E        &kp R        &kp T       /**/    &kp Y   &kp U       &kp I       &kp O        &kp P
    &hm LGUI A      &hm RALT S  &hm LSHFT D  &hm LCTRL F  &kp G       /**/    &kp H   &hm RCTRL J &hm RSHFT K &hm LALT L   &hm RGUI SEMI
    &kp Z          &kp X       &kp C        &kp V        &kp B       /**/    &kp N   &kp M       &kp COMMA   &kp DOT      &kp SLASH
-                                &kp LGUI   &lt NAV DEL &lt NUM BSPC    /**/  &lt FUNC ENTER  &lt SYM SPACE   &kp SQT
+                                &lt WIN LGUI   &lt NAV BSPC &lt NUM DEL   /**/  &lt FUNC ENTER  &lt SYM SPACE   &kp SQT
                         >;
                 };
 
@@ -88,7 +88,7 @@
                     |     |     |     |        |     |     |     |
 */
                         bindings = <
-   &kp ESC    &kp LC(W) &kp K_POWER &none       &none    /**/   &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
+   &kp ESC    &kp LA(W) &none  &none       &none    /**/   &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
    &kp LGUI   &kp LALT   &kp LSHFT   &kp LCTRL   &none    /**/   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp SQT
    &none      &none      &none       &none       &none    /**/   &kp BSPC   &kp DEL    &kp LC(C)  &kp LC(V)  &none
                          &none       &none       &none    /**/   &kp SPACE  &kp SPACE  &none
@@ -136,9 +136,9 @@
                     |     |     |     |        |     |     |     |
 */
                         bindings = <
-   &kp F1    &kp F2    &kp F3     &kp F4     &kp F5  /**/   &none      &none      &none      &none      &none
-   &kp F6    &kp F7    &kp F8     &kp F9     &kp F10  /**/   &none      &kp RCTRL  &kp RSHFT  &kp RALT   &kp RGUI
-   &kp F11    &kp F12    &none     &none     &none  /**/   &none      &none      &none      &none      &none
+   &kp F12    &kp F7    &kp F8     &kp F9     &none  /**/   &none      &none      &none      &none      &none
+   &kp F11    &kp F4    &kp F5     &kp F6     &none  /**/   &none      &kp RCTRL  &kp RSHFT  &kp RALT   &kp RGUI
+   &kp F10    &kp F1    &kp F2     &kp F3     &none  /**/   &none      &none      &none      &none      &none
                         &none      &none      &none  /**/   &none      &none      &none
                         >;
                 };
@@ -151,7 +151,7 @@
                     |     |     |     |        |     |     |     |
 */
                         bindings = <
-   &none      &none      &none      &none      &none    /**/   &none      &none      &none      &none      &none
+   &kp K_POWER     &none      &none      &none      &none    /**/   &none      &none      &none      &none      &none
    &none      &kp LALT   &kp LSHFT  &kp LCTRL  &none    /**/   &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4) &kp LG(N5)
    &none      &none      &none      &none      &none    /**/   &kp LA(Z)  &kp LA(X)  &kp LA(C)  &none      &none
                          &none      &none      &none    /**/   &kp SPACE  &kp SPACE  &none
