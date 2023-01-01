@@ -40,14 +40,21 @@
         combos {
                 compatible = "zmk,combos";
 
-                COMBO(slash, &kp PIPE, 7 8)
-                COMBO(backslash, &kp BSLH, 8 9)
+
+                COMBO(caret, &kp CARET, 0 1)
+                COMBO(at, &kp AT, 1 2)
 
                 COMBO(esckey, &kp ESC, 2 3)
+
+                COMBO(excl, &kp EXCL, 3 4)
+
+                COMBO(eql, &kp EQUAL, 5 6)
+                COMBO(backslash, &kp BSLH, 6 7)
+                COMBO(slash, &kp PIPE, 7 8)
+                COMBO(dal, &kp DOLLAR, 8 9)
+
                 COMBO(tabkey, &kp TAB, 12 13)
 
-                COMBO(excl, &kp EXCL, 1 2)
-                COMBO(at, &kp AT, 11 12)
 
                 COMBO(minus, &kp MINUS, 20 21)
                 COMBO(under, &kp UNDER, 21 22)
@@ -140,9 +147,9 @@
                     |     |     |     |        |     |     |     |
 */
                         bindings = <
-   &kp F1    &kp F2    &kp F3     &kp F4     &F5  /**/   &F6      &F7      &F8      &F9      &F10
+   &kp F1    &kp F2    &kp F3     &kp F4     &kp F5  /**/   &kp F6      &kp F7      &kp F8      &kp F9      &kp F10
    &kp LGUI  &kp LALT  &kp RSHIFT   &kp LCTRL  &none  /**/   &none     &kp RCTRL  &kp RSHFT  &kp RALT   &kp RGUI
-   &none &none &none &none &none  /**/   &none      &none      &none      &none      &none
+   &kp F1    &kp F2    &kp F3     &kp F4     &kp F5 /**/   &kp F6      &kp F7      &kp F8      &kp F9      &kp F10
                         &none      &none      &none  /**/   &none      &none      &none
                         >;
                 };
