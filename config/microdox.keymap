@@ -80,7 +80,7 @@
                 COMBO(zero, &kp N0, 9 19)
         };
 
-        &hm {
+        hm {
                         quick-tab-ms = <150>;
         }
 
