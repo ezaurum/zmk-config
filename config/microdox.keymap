@@ -32,6 +32,8 @@
                         label = "HOMEROW_MODS";
                         #binding-cells = <2>;
                         tapping_term_ms = <200>;
+                        quick_tab_ms = <150>;
+                        global-quick-tab;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
                 };
@@ -40,12 +42,13 @@
         combos {
                 compatible = "zmk,combos";
 
+                 COMBO(esckey, &kp ESC, 11 12)
+                 COMBO(tabkey, &kp TAB, 12 13)
+
 
                 COMBO(caret, &kp CARET, 0 1)
                 COMBO(at, &kp AT, 1 2)
-
-                COMBO(esckey, &kp ESC, 2 3)
-
+                COMBO(amps, &kp AMPS, 2 3)
                 COMBO(excl, &kp EXCL, 3 4)
 
                 COMBO(eql, &kp EQUAL, 5 6)
@@ -54,12 +57,8 @@
                 COMBO(dal, &kp DOLLAR, 8 9)
 
                 COMBO(percent, &kp PERCENT, 10 11)
-                COMBO(amps, &kp AMPS, 11 12)
-
-                COMBO(tabkey, &kp TAB, 12 13)
 
                 COMBO(astr, &kp STAR, 13 14)
-
 
                 COMBO(minus, &kp MINUS, 20 21)
                 COMBO(under, &kp UNDER, 21 22)
@@ -93,23 +92,19 @@
    &kp Q          &kp W       &kp E        &kp R        &kp T       /**/    &kp Y   &kp U       &kp I       &kp O        &kp P
    &hm LGUI A      &hm RALT S  &hm LSHFT D  &hm LCTRL F  &kp G       /**/    &kp H   &hm RCTRL J &hm RSHFT K &hm LALT L   &hm RGUI SEMI
    &kp Z          &kp X       &kp C        &kp V        &kp B       /**/    &kp N   &kp M       &kp COMMA   &kp DOT      &kp SLASH
-                        &lt WIN LGUI   &lt NAV BSPC &lt NUM DEL   /**/  &lt FUNC ENTER  &lt SYM SPACE  &lt RSHFT SQT
+                        &lt WIN LGUI   &lt NAV BSPC &lt NUM DEL   /**/  &lt FUNC ENTER  &lt SYM SPACE  &hm RSHFT SQT
                         >;
                 };
 
 
                 nav_layer {
 /*
-        | ESC | AF4 |     |     |  m1 |        | HME | DWN | UP  | END |     |
-        | WIN | ALT | SFT | CTL |     |        | <-  |  v  |  ^  | ->  |  '  |
-        |     |     |     |     |     |        |     | BSP | DEL |     |     |
-                    |     |     |     |        |     |     |     |
 */
                         bindings = <
    &kp ESC    &kp LA(W) &none  &none       &none    /**/   &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
    &kp LGUI   &kp LALT   &kp LSHFT   &kp LCTRL   &none    /**/   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp SQT
-   &none      &none      &none       &none       &none    /**/   &kp BSPC   &kp DEL    &kp LC(C)  &kp LC(V)  &none
-                         &kp LSHFT   &none       &kp DEL    /**/   &kp SPACE  &kp SPACE  &kp RSHFT
+   &none      &none      &none       &kp BSPC    &none    /**/   &kp LS(INS)  &kp LC(INS)    &kp LC(C)  &kp LC(V)  &none
+                         &kp LSHFT   &none       &kp DEL    /**/   &kp ENTER  &kp SPACE  &kp RSHFT
                         >;
                 };
 
