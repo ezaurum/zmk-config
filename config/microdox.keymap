@@ -8,6 +8,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
 #define NAV 1
@@ -47,6 +48,7 @@
 
 
                 COMBO(caret, &kp CARET, 0 1)
+                COMBO(sharp, &kp HASH, 0 2)
                 COMBO(at, &kp AT, 1 2)
                 COMBO(amps, &kp AMPS, 2 3)
                 COMBO(excl, &kp EXCL, 3 4)
