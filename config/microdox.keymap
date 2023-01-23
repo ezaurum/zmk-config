@@ -33,7 +33,6 @@
                         label = "HOMEROW_MODS";
                         #binding-cells = <2>;
                         tapping-term-ms = <200>;
-                        quick-tab-ms = <150>;
                         global-quick-tab;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
@@ -80,6 +79,10 @@
                 COMBO(nine, &kp N9, 8 18)
                 COMBO(zero, &kp N0, 9 19)
         };
+
+        &hm {
+                        quick-tab-ms = <150>;
+        }
 
         keymap {
                 compatible = "zmk,keymap";
