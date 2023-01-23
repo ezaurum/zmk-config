@@ -82,7 +82,7 @@
 
         hm {
                         quick-tab-ms = <150>;
-        }
+        };
 
         keymap {
                 compatible = "zmk,keymap";
