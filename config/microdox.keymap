@@ -18,7 +18,7 @@
 
 #define COMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
-    timeout-ms = <30>; \
+    timeout-ms = <20>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     layers = <0>; \
@@ -26,7 +26,7 @@
 
   &lt {
                         tapping-term-ms = <200>;
-                        quick-tap-ms = <120>;
+                        quick-tap-ms = <190>;
                         global-quick-tap;
 
   };
@@ -39,7 +39,7 @@
                         label = "HOMEROW_MODS";
                         #binding-cells = <2>;
                        tapping-term-ms = <200>;
-                        quick-tap-ms = <120>;
+                        quick-tap-ms = <190>;
                         global-quick-tap;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
