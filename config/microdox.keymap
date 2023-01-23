@@ -34,6 +34,7 @@
                         #binding-cells = <2>;
                         tapping-term-ms = <200>;
                         global-quick-tab;
+                        quick_tab_ms = <150>;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
                 };
@@ -78,10 +79,6 @@
                 COMBO(eight, &kp N8, 7 17)
                 COMBO(nine, &kp N9, 8 18)
                 COMBO(zero, &kp N0, 9 19)
-        };
-
-        hm {
-                        quick-tab-ms = <150>;
         };
 
         keymap {
