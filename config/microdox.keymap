@@ -18,15 +18,15 @@
 
 #define COMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
-    timeout-ms = <50>; \
+    timeout-ms = <40>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     layers = <0>; \
   };
 
   &lt {
-                        tapping-term-ms = <250>;
-                        quick-tap-ms = <200>;
+                        tapping-term-ms = <220>;
+                        quick-tap-ms = <190>;
                         global-quick-tap;
 
   };
@@ -38,8 +38,8 @@
                         compatible = "zmk,behavior-hold-tap";
                         label = "HOMEROW_MODS";
                         #binding-cells = <2>;
-                        tapping-term-ms = <250>;
-                        quick-tap-ms = <200>;
+                       tapping-term-ms = <220>;
+                        quick-tap-ms = <190>;
                         global-quick-tap;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
