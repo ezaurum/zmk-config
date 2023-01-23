@@ -93,7 +93,7 @@
    &kp Q          &kp W       &kp E        &kp R        &kp T       /**/    &kp Y   &kp U       &kp I       &kp O        &kp P
    &hm LGUI A      &hm RALT S  &hm LSHFT D  &hm LCTRL F  &kp G       /**/    &kp H   &hm RCTRL J &hm RSHFT K &hm LALT L   &hm RGUI SEMI
    &kp Z          &kp X       &kp C        &kp V        &kp B       /**/    &kp N   &kp M       &kp COMMA   &kp DOT      &kp SLASH
-                                &lt WIN LGUI   &lt NAV BSPC &lt NUM DEL   /**/  &lt FUNC ENTER  &lt SYM SPACE   &lt RSHFT SQT
+                        &lt WIN LGUI   &lt NAV BSPC &lt NUM DEL   /**/  &lt FUNC ENTER  &lt SYM SPACE  &lt RSHFT SQT
                         >;
                 };
 
@@ -109,7 +109,7 @@
    &kp ESC    &kp LA(W) &none  &none       &none    /**/   &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
    &kp LGUI   &kp LALT   &kp LSHFT   &kp LCTRL   &none    /**/   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp SQT
    &none      &none      &none       &none       &none    /**/   &kp BSPC   &kp DEL    &kp LC(C)  &kp LC(V)  &none
-                         &kp  LSHFT  &none       &kp DEL    /**/   &kp SPACE  &kp SPACE  &kp RSHFT
+                         &kp LSHFT   &none       &kp DEL    /**/   &kp SPACE  &kp SPACE  &kp RSHFT
                         >;
                 };
 
@@ -125,7 +125,7 @@
    &kp PLUS   &kp MINUS &kp ASTRK  &kp SLASH  &kp EQUAL /**/  &none      &kp N7     &kp N8     &kp N9      &kp N0
    &kp LGUI   &kp LALT  &kp LSHFT  &kp LCTRL  &none     /**/  &none      &kp N4     &kp N5     &kp N6      &kp N0
    &kp DOT    &kp COMMA &none      &none      &none     /**/  &none      &kp N1     &kp N2     &kp N3      &kp N0
-                        &kp  LSHFT  &kp BSPC       &kp none /**/   &kp ENTER  &kp SPACE  &kp RSHFT
+                        &kp LSHFT  &kp BSPC       &kp none /**/   &kp ENTER  &kp SPACE  &kp RSHFT
                         >;
                 };
 
