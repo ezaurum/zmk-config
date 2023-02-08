@@ -11,14 +11,13 @@
 
 #define DEFAULT 0
 #define NAV 1
-#define NUM 2
-#define SYM 3
-#define FUNC 4
-#define WIN 5
+#define HOMEROW 2
+#define FUNC 3
+#define SYM 4
 
-#define COMBO(NAME, BINDINGS, KEYPOS) \
+#define COMBO(NAME, BINDINGS, KEYPOS, TIMEOUT) \
   combo_##NAME { \
-    timeout-ms = <50>; \
+    timeout-ms = <90>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     layers = <0>; \
@@ -26,9 +25,8 @@
 
   &lt {
                         tapping-term-ms = <250>;
-                        quick-tap-ms = <200>;
+                        quick-tap-ms = <220>;
                         global-quick-tap;
-
   };
 
 / {
@@ -38,8 +36,8 @@
                         compatible = "zmk,behavior-hold-tap";
                         label = "HOMEROW_MODS";
                         #binding-cells = <2>;
-                        tapping-term-ms = <250>;
-                        quick-tap-ms = <200>;
+                        tapping-term-ms = <200>;
+                        quick-tap-ms = <150>;
                         global-quick-tap;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
@@ -51,29 +49,12 @@
 
                  COMBO(esckey, &kp ESC, 11 12)
                  COMBO(tabkey, &kp TAB, 12 13)
+                 COMBO(tabkey, &kp LSHFT, 11 13)
 
-
-                COMBO(caret, &kp CARET, 0 1)
-                COMBO(sharp, &kp HASH, 0 2)
-                COMBO(at, &kp AT, 1 2)
-                COMBO(amps, &kp AMPS, 2 3)
-                COMBO(excl, &kp EXCL, 3 4)
-
-                COMBO(eql, &kp EQUAL, 5 6)
-                COMBO(backslash, &kp BSLH, 6 7)
-                COMBO(slash, &kp PIPE, 7 8)
-                COMBO(dal, &kp DOLLAR, 8 9)
-
-                COMBO(percent, &kp PERCENT, 10 11)
-
-                COMBO(astr, &kp STAR, 13 14)
-
-                COMBO(minus, &kp MINUS, 20 21)
-                COMBO(under, &kp UNDER, 21 22)
-                COMBO(tilde, &kp TILDE, 22 23)
-                COMBO(grave, &kp GRAVE, 23 24)
-
-                COMBO(plus, &kp PLUS, 28 29)
+                 COMBO(tabkey, &kp RSHFT, 16 18)
+                 COMBO(tabkey, &kp BSPC, 16 17)
+                 COMBO(tabkey, &kp SQT, 16 19)
+                 COMBO(tabkey, &kp SEMI, 17 19)
 
                 COMBO(one, &kp N1, 0 10)
                 COMBO(two, &kp N2, 1 11)
@@ -98,9 +79,9 @@
 //             |  -  | BSP | DEL |   | ENT | SPC  | ALT |
                         bindings = <
    &kp Q          &kp W       &kp E        &kp R        &kp T       /**/    &kp Y   &kp U       &kp I       &kp O        &kp P
-   &hm LGUI A      &hm RALT S  &hm LSHFT D  &hm LCTRL F  &kp G       /**/    &kp H   &hm RCTRL J &hm RSHFT K &hm LALT L   &hm RGUI SEMI
+   &kp A      &kp S  &kp D  &kp F  &kp G       /**/    &kp H   &kp J &kp  K &kp  L   &kp SEMI
    &kp Z          &kp X       &kp C        &kp V        &kp B       /**/    &kp N   &kp M       &kp COMMA   &kp DOT      &kp SLASH
-                        &lt WIN LGUI   &lt NAV BSPC &lt NUM DEL   /**/  &lt FUNC ENTER  &lt SYM SPACE  &hm RSHFT SQT
+                        &lt HOMEROW LGUI   &lt NAV BSPC &lt HOMEROW DEL   /**/  &lt HOMEROW ENTER  &lt HOMEROW SPACE  &lt SYM SQT
                         >;
                 };
 
@@ -109,29 +90,25 @@
 /*
 */
                         bindings = <
-   &kp ESC    &kp LA(W) &none  &none       &none    /**/   &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
+   &kp ESC    &kp LA(W) &none  &none       &none    /**/   &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp INS
    &kp LGUI   &kp LALT   &kp LSHFT   &kp LCTRL   &none    /**/   &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp SQT
    &none      &none      &none       &kp BSPC    &none    /**/   &kp LS(INS)  &kp LC(INS)    &kp LC(C)  &kp LC(V)  &none
                          &kp LSHFT   &none       &kp DEL    /**/   &kp ENTER  &kp SPACE  &kp RSHFT
                         >;
                 };
-
-
-                num_layer {
-/*
-        |  +  |  -  |  *  |  /  |  =  |        |     |  7  |  8  |  9  |  0  |
-        | WIN | ALT | SFT | CTL |     |        |     |  4  |  5  |  6  |  0  |
-        |  .  |  ,  |     |     |     |        |     |  1  |  2  |  3  |  0  |
-                    |     |     |     |        |     |     |     |
-*/
+                homerow_layer {
+// -----------------------------------------------------------------------------------------
+// |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
+// |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
+// |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
+//             |  -  | BSP | DEL |   | ENT | SPC  | ALT |
                         bindings = <
-   &kp PLUS   &kp MINUS &kp ASTRK  &kp SLASH  &kp EQUAL /**/  &none      &kp N7     &kp N8     &kp N9      &kp N0
-   &kp LGUI   &kp LALT  &kp LSHFT  &kp LCTRL  &none     /**/  &none      &kp N4     &kp N5     &kp N6      &kp N0
-   &kp DOT    &kp COMMA &none      &none      &none     /**/  &none      &kp N1     &kp N2     &kp N3      &kp N0
-                        &kp LSHFT  &kp BSPC   &none /**/   &kp ENTER  &kp SPACE  &kp RSHFT
+   &kp Q          &kp W       &kp E        &kp R        &kp T       /**/    &kp Y   &kp U       &kp I       &kp O        &kp P
+   &hm LGUI A      &hm RALT S  &hm LSHFT D  &hm LCTRL F  &kp G       /**/    &kp H   &hm RCTRL J &hm RSHFT K &hm LALT L   &hm RGUI SEMI
+   &kp Z          &kp X       &kp C        &kp V        &kp B       /**/    &kp N   &kp M       &kp COMMA   &kp DOT      &kp SLASH
+                        &lt WIN LGUI   &lt FUNC BSPC &none   /**/  &none  &lt FUNC SPACE  &hm RSHFT SQT
                         >;
                 };
-
 
                 sym_layer {
 /*
@@ -164,19 +141,6 @@
                         >;
                 };
 
-                win_layer {
-/* Layer for WM Shortcuts
-        |     |     |     |     |     |        |     |     |     |     |     |
-        |     | ALT | SFT | CTL |     |        | D1  |  D2 | D3  | D4  |  D5 |
-        |     |     |     |     |     |        |  L  |  M  | R   |     |     |
-                    |     |     |     |        |     |     |     |
-*/
-                        bindings = <
-   &none     &none      &none      &none      &none    /**/   &none      &none      &none      &none      &none
-   &none      &kp LALT   &kp LSHFT  &kp LCTRL  &none    /**/   &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4) &kp LG(N5)
-   &none      &none      &none      &none      &none    /**/   &kp LA(Z)  &kp LA(X)  &kp LA(C)  &none      &none
-                         &none      &none      &none    /**/   &kp SPACE  &kp SPACE  &none
-                        >;
-                };
+
         };
 };
