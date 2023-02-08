@@ -105,9 +105,9 @@
 //             |  -  | BSP | DEL |   | ENT | SPC  | ALT |
                         bindings = <
    &kp Q          &kp W       &kp E        &kp R        &kp T       /**/    &kp Y   &kp U       &kp I       &kp O        &kp P
-   &hm LGUI A      &hm RALT S  &hm LSHFT D  &hm LCTRL F  &kp G       /**/    &kp H   &hm RCTRL J &hm RSHFT K &hm LALT L   &hm RGUI SEMI
-   &kp Z          &kp X       &kp C        &kp V        &kp B       /**/    &kp N   &kp M       &kp COMMA   &kp DOT      &kp SLASH
-                        &lt WIN LGUI   &lt FUNC BSPC &none   /**/  &none  &lt FUNC SPACE  &hm RSHFT SQT
+   &hm LGUI A   sd  &hm RALT S  &hm LSHFT D  &hm LCTRL F  &kp G       /**/    &kp H   &hm RCTRL J &hm RSHFT K &hm LALT L   &hm RGUI SEMI
+   &kp Z          &kp X       &kp C        &kp V        &kp B       /**/    &kp N   &kp M     &kp COMMA   &kp DOT      &kp SLASH
+                        &lt WIN LGUI   &lt FUNC BSPC &none   /**/  &none  &lt FUNC SPACE  &lt RSHFT SQT
                         >;
                 };
 
