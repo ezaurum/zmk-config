@@ -49,13 +49,13 @@
 
                  COMBO(esckey, &kp ESC, 11 12)
                  COMBO(tabkey, &kp TAB, 12 13)
-                 COMBO(tabkey, &kp LSHFT, 11 13)
+                 COMBO(ls, &kp LSHFT, 11 13)
 
-                 COMBO(tabkey, &kp RSHFT, 16 18)
-                 COMBO(tabkey, &kp BSPC, 16 17)
-                 COMBO(tabkey, &kp SQT, 16 19)
-                 COMBO(tabkey, &kp LS(SEMI), 18 19)
-                 COMBO(tabkey, &kp LS(SQT), 17 19)
+                 COMBO(rs, &kp RSHFT, 16 18)
+                 COMBO(bs, &kp BSPC, 16 17)
+                 COMBO(sqt, &kp SQT, 16 19)
+                 COMBO(colon, &kp LS(SEMI), 18 19)
+                 COMBO(dsqt, &kp LS(SQT), 17 19)
 
                 COMBO(one, &kp N1, 0 10)
                 COMBO(two, &kp N2, 1 11)
@@ -86,7 +86,6 @@
                         >;
                 };
 
-
                 nav_layer {
 /*
 */
@@ -97,6 +96,7 @@
                          &kp LSHFT   &none       &kp DEL    /**/   &kp ENTER  &kp SPACE  &kp RSHFT
                         >;
                 };
+
                 homerow_layer {
 // -----------------------------------------------------------------------------------------
 // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
@@ -111,7 +111,7 @@
                         >;
                 };
 
-                   func_layer {
+         func_layer {
                 /*
                         | F12 |  F7 |  F8 |  F9 |     |        |     |     |     |     |     |
                         | F11 |  F4 |  F5 |  F6 |     |        |     | WIN | ALT | SFT | CTL |
@@ -124,9 +124,9 @@
                    &kp F1    &kp F2    &kp F3     &kp F4     &kp F5 /**/   &kp F6      &kp F7      &kp F8      &kp F9      &kp F10
                                         &none      &none      &none  /**/   &none      &none      &none
                                         >;
-                                };
+            };
 
-                sym_layer {
+            sym_layer {
 /*
         |  `  |  $  |  !  |  {  |  }  |        |     |     |     |     |     |
         |  \  |  #  |  &  |  (  |  )  |        |     |     |     |     |     |
@@ -139,11 +139,6 @@
    &kp MINUS  &kp UNDER &kp PIPE   &kp LBKT   &kp RBKT   /**/   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_CLR
                         &none      &none      &none      /**/   &none         &none         &none
                         >;
-                };
-
-
-
-
-
         };
+    };
 };
